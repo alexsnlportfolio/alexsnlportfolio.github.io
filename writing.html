@@ -48,40 +48,63 @@
     }
 
     section {
-      padding: 40px;
-      background-color: #E0E0E0;
-      transition: background-color 0.3s;
       position: relative;
       width: 300px;
       height: 200px;
       overflow: hidden;
+      background-color: #E0E0E0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
     }
 
     section:hover {
-      background-color: #FF9900;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    section a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 20px;
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    section a:hover {
+      color: #FF9900;
+    }
+
+    section h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
     }
 
     section:hover h2 {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section p {
+      text-align: center;
       opacity: 0;
-      transition: opacity 0.3s;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
     }
 
     section:hover p {
       opacity: 1;
-      transition: opacity 0.3s;
-    }
-
-    section h2 {
-      color: #333;
-      font-size: 18px;
-      font-weight: bold;
-      transition: opacity 0.3s;
-    }
-
-    section p {
-      color: #fff;
-      opacity: 0;
-      transition: opacity 0.3s;
+      transform: translateY(0);
     }
 
     footer {
@@ -147,5 +170,23 @@
   <footer>
     <p>&copy; 2023 Alexandros Sanoulis</p>
   </footer>
+
+  <script>
+    // JavaScript code for creating parallax effect on sections
+    const sections = document.querySelectorAll('section');
+
+    function parallaxEffect(e) {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+
+      sections.forEach((section) => {
+        const speed = section.getAttribute('data-speed');
+
+        section.style.transform = `translateX(${mouseX * speed}px) translateY(${mouseY * speed}px)`;
+      });
+    }
+
+    document.addEventListener('mousemove', parallaxEffect);
+  </script>
 </body>
 </html>
