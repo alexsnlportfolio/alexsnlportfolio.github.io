@@ -42,7 +42,7 @@
 
     .container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       justify-items: center;
       margin-top: 50px;
@@ -51,7 +51,7 @@
 
     .container section {
       position: relative;
-      width: 100%;
+      width: 300px;
       height: 300px;
       overflow: hidden;
       background-color: #E0E0E0;
@@ -111,11 +111,20 @@
       padding: 20px;
       text-align: center;
       font-size: 14px;
-      margin-top: auto;
+      margin-top: 50px;
     }
 
     /* Media Queries for Mobile Devices */
     @media (max-width: 767px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .container section {
+        width: 100%;
+        height: auto;
+      }
+
       header {
         padding: 60px 40px;
       }
