@@ -7,8 +7,11 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background: linear-gradient(135deg, #F9F7E8, #F0E4B1);
       color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
@@ -42,53 +45,67 @@
 
     .container {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       justify-items: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
     }
 
-    section {
+    .container section {
       position: relative;
       width: 300px;
-      height: 200px;
+      height: 300px;
       overflow: hidden;
       background-color: #E0E0E0;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       border-radius: 8px;
       transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
     }
 
-    section:hover {
+    .container section:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     }
 
-    section a {
+    .container .section-content {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100%;
-      padding: 20px;
       text-decoration: none;
       color: #333;
-      transition: color 0.3s;
     }
 
-    section a:hover {
-      color: #FF9900;
-    }
-
-    section h2 {
-      font-size: 28px;
+    .container h2 {
+      font-size: 24px;
       font-weight: bold;
       margin-bottom: 10px;
       text-align: center;
+      overflow-wrap: break-word;
     }
 
-    section p {
+    .container p {
       text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+      margin: 0;
+    }
+
+    .container section:hover p {
+      opacity: 1;
+    }
+
+    .container section:hover {
+      background: linear-gradient(135deg, #FFDDC1, #FFB87C);
+      color: #333;
     }
 
     footer {
@@ -97,6 +114,13 @@
       padding: 20px;
       text-align: center;
       font-size: 14px;
+      margin-top: auto;
+    }
+    
+    /* Additional Styles for Health and Medicine Box */
+    .container .health-section {
+      padding: 40px;
+      font-size: 18px;
     }
   </style>
 </head>
@@ -113,38 +137,51 @@
   </header>
 
   <div class="container">
-    <section>
-      <a href="health.html">
+    <section class="health-section">
+      <a href="health.html" class="section-content">
         <h2>Healthy Lifestyle and Medicine</h2>
         <p>Explore articles and insights on promoting a healthy lifestyle and the latest developments in medicine.</p>
+        <p class="details">Discover More</p>
       </a>
     </section>
 
-    <section>
-      <a href="#">
+    <section class="health-section">
+      <a href="#" class="section-content">
         <h2>Technology</h2>
         <p>Discover the latest advancements and trends in the world of technology.</p>
+        <p class="details">Explore Now</p>
       </a>
     </section>
 
-    <section>
-      <a href="#">
+    <section class="health-section">
+      <a href="#" class="section-content">
         <h2>Sciences</h2>
         <p>Uncover fascinating discoveries and scientific breakthroughs across various disciplines.</p>
+        <p class="details">Learn More</p>
       </a>
     </section>
 
-    <section>
-      <a href="#">
+    <section class="health-section">
+      <a href="#" class="section-content">
         <h2>Travel</h2>
         <p>Embark on exciting journeys and explore the wonders of different destinations around the globe.</p>
+        <p class="details">Start Exploring</p>
       </a>
     </section>
 
-    <section>
-      <a href="#">
+    <section class="health-section">
+      <a href="#" class="section-content">
         <h2>Art and Culture</h2>
         <p>Delve into the realms of art, music, literature, and cultural expressions from diverse perspectives.</p>
+        <p class="details">Discover Art</p>
+      </a>
+    </section>
+
+    <section class="health-section">
+      <a href="#" class="section-content">
+        <h2>Coming Soon</h2>
+        <p>New and exciting content coming soon!</p>
+        <p class="details">Stay Tuned</p>
       </a>
     </section>
 
