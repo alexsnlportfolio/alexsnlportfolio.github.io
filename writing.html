@@ -13,9 +13,10 @@
 
     header {
       background-color: #333;
-      padding: 40px;
+      padding: 20px;
       text-align: center;
       color: #fff;
+      height: auto;
     }
 
     nav ul {
@@ -51,11 +52,12 @@
 
     .container section {
       position: relative;
-      width: 300px;
-      height: 300px;
+      width: 100%;
+      max-width: 300px;
+      height: 200px;
       overflow: hidden;
       background-color: #E0E0E0;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
       transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
@@ -68,7 +70,7 @@
 
     .container section:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     }
 
     .container .section-content {
@@ -86,14 +88,12 @@
       font-weight: bold;
       margin-bottom: 10px;
       text-align: center;
-      overflow-wrap: break-word;
     }
 
     .container p {
       text-align: center;
       opacity: 0;
       transition: opacity 0.3s;
-      margin: 0;
     }
 
     .container section:hover p {
@@ -111,7 +111,7 @@
       padding: 20px;
       text-align: center;
       font-size: 14px;
-      margin-top: 50px;
+      margin-top: auto;
     }
 
     /* Media Queries for Mobile Devices */
@@ -121,12 +121,15 @@
       }
 
       .container section {
-        width: 100%;
-        height: auto;
+        height: 150px;
       }
 
       header {
-        padding: 60px 40px;
+        padding: 40px;
+      }
+
+      footer {
+        margin-top: 20px;
       }
     }
   </style>
