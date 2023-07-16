@@ -40,10 +40,18 @@
       color: #ff9900;
     }
 
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     section {
       padding: 40px;
       background-color: #E0E0E0;
       margin-bottom: 20px;
+      margin-right: 20px;
+      flex-basis: calc(50% - 20px);
       position: relative;
       width: 300px;
       height: 200px;
@@ -99,42 +107,44 @@
     <h1>Welcome to the Portfolio of Alexandros Sanoulis!</h1>
   </header>
 
-  <section>
-    <a href="health.html">
-      <h2>Healthy Lifestyle and Medicine</h2>
-      <p>Explore articles and insights on promoting a healthy lifestyle and the latest developments in medicine.</p>
-    </a>
-  </section>
+  <div class="container">
+    <section>
+      <a href="health.html">
+        <h2>Healthy Lifestyle and Medicine</h2>
+        <p>Explore articles and insights on promoting a healthy lifestyle and the latest developments in medicine.</p>
+      </a>
+    </section>
 
-  <section>
-    <a href="#">
-      <h2>Technology</h2>
-      <p>Discover the latest advancements and trends in the world of technology.</p>
-    </a>
-  </section>
+    <section>
+      <a href="#">
+        <h2>Technology</h2>
+        <p>Discover the latest advancements and trends in the world of technology.</p>
+      </a>
+    </section>
 
-  <section>
-    <a href="#">
-      <h2>Sciences</h2>
-      <p>Uncover fascinating discoveries and scientific breakthroughs across various disciplines.</p>
-    </a>
-  </section>
+    <section>
+      <a href="#">
+        <h2>Sciences</h2>
+        <p>Uncover fascinating discoveries and scientific breakthroughs across various disciplines.</p>
+      </a>
+    </section>
 
-  <section>
-    <a href="#">
-      <h2>Travel</h2>
-      <p>Embark on exciting journeys and explore the wonders of different destinations around the globe.</p>
-    </a>
-  </section>
+    <section>
+      <a href="#">
+        <h2>Travel</h2>
+        <p>Embark on exciting journeys and explore the wonders of different destinations around the globe.</p>
+      </a>
+    </section>
 
-  <section>
-    <a href="#">
-      <h2>Art and Culture</h2>
-      <p>Delve into the realms of art, music, literature, and cultural expressions from diverse perspectives.</p>
-    </a>
-  </section>
+    <section>
+      <a href="#">
+        <h2>Art and Culture</h2>
+        <p>Delve into the realms of art, music, literature, and cultural expressions from diverse perspectives.</p>
+      </a>
+    </section>
 
-  <!-- Add more sections for additional subjects -->
+    <!-- Add more sections for additional subjects -->
+  </div>
 
   <footer>
     <p>&copy; 2023 Alexandros Sanoulis</p>
