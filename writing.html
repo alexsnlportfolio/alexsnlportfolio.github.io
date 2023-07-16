@@ -117,10 +117,22 @@
       margin-top: auto;
     }
     
-    /* Additional Styles for Health and Medicine Box */
-    .container .health-section {
-      padding: 40px;
-      font-size: 18px;
+    /* Media Queries for Mobile Devices */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .container section {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+      }
+
+      .container h2 {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -138,7 +150,7 @@
   </header>
 
   <div class="container">
-    <section class="health-section">
+    <section>
       <a href="health.html" class="section-content">
         <h2>Healthy Lifestyle and Medicine</h2>
         <p>Explore articles and insights on promoting a healthy lifestyle and the latest developments in medicine.</p>
@@ -146,7 +158,7 @@
       </a>
     </section>
 
-    <section class="health-section">
+    <section>
       <a href="#" class="section-content">
         <h2>Technology</h2>
         <p>Discover the latest advancements and trends in the world of technology.</p>
@@ -154,7 +166,7 @@
       </a>
     </section>
 
-    <section class="health-section">
+    <section>
       <a href="#" class="section-content">
         <h2>Sciences</h2>
         <p>Uncover fascinating discoveries and scientific breakthroughs across various disciplines.</p>
@@ -162,7 +174,7 @@
       </a>
     </section>
 
-    <section class="health-section">
+    <section>
       <a href="#" class="section-content">
         <h2>Travel</h2>
         <p>Embark on exciting journeys and explore the wonders of different destinations around the globe.</p>
@@ -170,7 +182,7 @@
       </a>
     </section>
 
-    <section class="health-section">
+    <section>
       <a href="#" class="section-content">
         <h2>Art and Culture</h2>
         <p>Delve into the realms of art, music, literature, and cultural expressions from diverse perspectives.</p>
@@ -178,7 +190,7 @@
       </a>
     </section>
 
-    <section class="health-section">
+    <section>
       <a href="#" class="section-content">
         <h2>Coming Soon</h2>
         <p>New and exciting content coming soon!</p>
