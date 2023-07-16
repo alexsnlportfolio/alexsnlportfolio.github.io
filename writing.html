@@ -42,7 +42,7 @@
 
     .container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
       justify-items: center;
     }
@@ -81,30 +81,14 @@
     }
 
     section h2 {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: bold;
       margin-bottom: 10px;
       text-align: center;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s, transform 0.5s;
-    }
-
-    section:hover h2 {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     section p {
       text-align: center;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s, transform 0.5s;
-    }
-
-    section:hover p {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     footer {
@@ -170,23 +154,5 @@
   <footer>
     <p>&copy; 2023 Alexandros Sanoulis</p>
   </footer>
-
-  <script>
-    // JavaScript code for creating parallax effect on sections
-    const sections = document.querySelectorAll('section');
-
-    function parallaxEffect(e) {
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
-
-      sections.forEach((section) => {
-        const speed = section.getAttribute('data-speed');
-
-        section.style.transform = `translateX(${mouseX * speed}px) translateY(${mouseY * speed}px)`;
-      });
-    }
-
-    document.addEventListener('mousemove', parallaxEffect);
-  </script>
 </body>
 </html>
