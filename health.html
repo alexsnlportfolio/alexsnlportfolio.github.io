@@ -19,10 +19,9 @@
     }
 
     .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      justify-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 20px;
     }
 
@@ -31,6 +30,16 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
       padding: 20px;
+      text-align: center;
+    }
+
+    section p {
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    section p:first-child {
+      font-weight: bold;
     }
 
     footer {
@@ -42,9 +51,8 @@
     }
 
     @media screen and (max-width: 767px) {
-      .container {
-        grid-template-columns: 1fr;
-        padding: 10px;
+      section {
+        font-size: 16px;
       }
     }
   </style>
@@ -56,13 +64,24 @@
 
   <div class="container">
     <section>
-      <h2>How to Live a Healthy Lifestyle Naturally</h2>
-      <p>Eating a balanced diet, engaging in regular physical activity, getting enough sleep, staying hydrated, and managing stress are essential for a healthy lifestyle.</p>
-    </section>
-
-    <section>
-      <h2>Understanding Medications: Simplified Explanation</h2>
-      <p>Medications target specific biological processes, alleviate symptoms, manage chronic conditions, and can have side effects. It's important to follow prescribed dosages and consult healthcare professionals.</p>
+      <p><strong>Healthy Lifestyle:</strong></p>
+      <p>Living a healthy lifestyle is important for overall well-being. Here are some natural ways to promote a healthy life:</p>
+      <ul>
+        <li>Eat a balanced diet with plenty of fruits, vegetables, whole grains, and lean proteins.</li>
+        <li>Engage in regular physical activity, such as walking, jogging, or cycling.</li>
+        <li>Get enough sleep to allow your body to rest and rejuvenate.</li>
+        <li>Stay hydrated by drinking an adequate amount of water throughout the day.</li>
+        <li>Manage stress through relaxation techniques, such as meditation or yoga.</li>
+      </ul>
+      <p><strong>Medication:</strong></p>
+      <p>Medication plays a crucial role in treating and managing various health conditions. Here are some key points about medication:</p>
+      <ul>
+        <li>Medications are designed to alleviate symptoms and address underlying causes of illnesses.</li>
+        <li>They can help manage chronic conditions, control pain, or improve overall health.</li>
+        <li>It is important to follow healthcare professionals' guidance and adhere to prescribed dosages for safe and effective use.</li>
+        <li>Understanding the benefits, potential side effects, and interactions of medications is essential.</li>
+        <li>Consulting with a healthcare provider or pharmacist is recommended for personalized medication information.</li>
+      </ul>
     </section>
   </div>
 
