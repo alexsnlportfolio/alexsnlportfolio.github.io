@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Healthy Lifestyle and Medicine - Portfolio of Alexandros Sanoulis</title>
+  <title>Health and Medicine - Portfolio of Alexandros Sanoulis</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -41,71 +41,25 @@
     }
 
     .container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      justify-items: center;
       padding: 20px;
     }
 
-    section {
-      position: relative;
-      width: 300px;
-      height: 200px;
-      overflow: hidden;
+    .blog-section {
       background-color: #E0E0E0;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-    }
-
-    section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    section .details {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 18px;
-      opacity: 1;
-      transition: opacity 0.3s;
-      pointer-events: none;
-    }
-
-    section:hover .details {
-      opacity: 0;
-    }
-
-    section a {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
       padding: 20px;
-      text-decoration: none;
-      color: #333;
+      margin-bottom: 20px;
     }
 
-    section h2 {
+    .blog-section h2 {
       font-size: 24px;
       font-weight: bold;
       margin-bottom: 10px;
-      text-align: center;
     }
 
-    section p {
-      text-align: center;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    section:hover p {
-      opacity: 1;
+    .blog-section p {
+      margin-bottom: 10px;
     }
 
     footer {
@@ -125,14 +79,6 @@
         display: block;
         margin: 10px 0;
       }
-
-      .container {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        width: 100%;
-      }
     }
   </style>
 </head>
@@ -150,34 +96,26 @@
   </header>
 
   <div class="container">
-    <section>
-      <a href="#">
-        <h2>Healthy Lifestyle</h2>
-        <p><strong>Living a healthy lifestyle is important for overall well-being.</strong></p>
-        <p>Here are some natural ways to promote a healthy life:</p>
-        <ul>
-          <li>Eat a balanced diet with plenty of fruits, vegetables, whole grains, and lean proteins.</li>
-          <li>Engage in regular physical activity, such as walking, jogging, or cycling.</li>
-          <li>Get enough sleep to allow your body to rest and rejuvenate.</li>
-          <li>Stay hydrated by drinking an adequate amount of water throughout the day.</li>
-          <li>Manage stress through relaxation techniques, such as meditation or yoga.</li>
-        </ul>
-      </a>
-    </section>
-
-    <section>
-      <a href="#">
-        <h2>Medicine</h2>
-        <p><strong>Understanding the role of medication in treating and managing health conditions.</strong></p>
-        <p>Medications can be used to address both physical and mental illnesses. They work in various ways to alleviate symptoms and promote healing. Some key points about medications include:</p>
-        <ul>
-          <li>Medications are developed based on scientific research and undergo rigorous testing to ensure their safety and effectiveness.</li>
-          <li>They can target specific biological processes or chemicals in the body to produce desired therapeutic effects.</li>
-          <li>Medications can help manage chronic conditions, provide relief from pain, reduce inflammation, or correct chemical imbalances in the brain.</li>
-          <li>It is important to take medications as prescribed by a healthcare professional and follow their guidance for dosage and duration.</li>
-          <li>Side effects may occur with certain medications, and it's essential to communicate any concerns or changes in symptoms to the healthcare provider.</li>
-        </ul>
-      </a>
+    <section class="blog-section">
+      <h2>Health and Medicine</h2>
+      <p><strong>Living a healthy lifestyle is important for overall well-being.</strong></p>
+      <p>Here are some natural ways to promote a healthy life:</p>
+      <ul>
+        <li>Eat a balanced diet with plenty of fruits, vegetables, whole grains, and lean proteins.</li>
+        <li>Engage in regular physical activity, such as walking, jogging, or cycling.</li>
+        <li>Get enough sleep to allow your body to rest and rejuvenate.</li>
+        <li>Stay hydrated by drinking an adequate amount of water throughout the day.</li>
+        <li>Manage stress through relaxation techniques, such as meditation or yoga.</li>
+      </ul>
+      <p><strong>Understanding the role of medication in treating and managing health conditions.</strong></p>
+      <p>Medications can be used to address both physical and mental illnesses. They work in various ways to alleviate symptoms and promote healing. Some key points about medications include:</p>
+      <ul>
+        <li>Medications are developed based on scientific research and undergo rigorous testing to ensure their safety and effectiveness.</li>
+        <li>They can target specific biological processes or chemicals in the body to produce desired therapeutic effects.</li>
+        <li>Medications can help manage chronic conditions, provide relief from pain, reduce inflammation, or correct chemical imbalances in the brain.</li>
+        <li>It is important to take medications as prescribed by a healthcare professional and follow their guidance for dosage and duration.</li>
+        <li>Side effects may occur with certain medications, and it's essential to communicate any concerns or changes in symptoms to the healthcare provider.</li>
+      </ul>
     </section>
   </div>
 
