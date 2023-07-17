@@ -13,9 +13,32 @@
 
     header {
       background-color: #333;
-      padding: 40px;
+      padding: 20px;
       text-align: center;
       color: #fff;
+    }
+
+    header nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    header nav ul li {
+      margin-right: 20px;
+    }
+
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    header nav ul li a:hover {
+      color: #ff9900;
     }
 
     main {
@@ -78,6 +101,10 @@
 
       .category {
         width: 100%;
+      }
+
+      header nav ul li a {
+        font-size: 16px;
       }
     }
   </style>
