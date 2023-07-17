@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Projects | Alexandros Sanoulis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      padding: 40px;
+      text-align: center;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5em;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff9900;
+    }
+
+    main {
+      padding: 40px;
+      background-color: #E0E0E0;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 150px;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff9900;
+    }
+
+    #storyOutput {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    /* Media Queries for Mobile Devices */
+    @media (max-width: 768px) {
+      header {
+        padding: 20px;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      form {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Projects</h1>
+  </header>
+
+  <main>
+    <form id="characterForm">
+      <label for="characterName">Character Name</label>
+      <input type="text" id="characterName" required>
+
+      <label for="characterAge">Character Age</label>
+      <input type="text" id="characterAge" required>
+
+      <label for="characterTrait">Distinctive Trait</label>
+      <input type="text" id="characterTrait" required>
+
+      <label for="storyInput">Story Input</label>
+      <textarea id="storyInput" required></textarea>
+
+      <button type="submit">Generate Story</button>
+    </form>
+
+    <div id="storyOutput"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Alexandros Sanoulis</p>
+  </footer>
+
+  <script>
+    document.getElementById("characterForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      
+      const characterName = document.getElementById("characterName").value;
+      const characterAge = document.getElementById("characterAge").value;
+      const characterTrait = document.getElementById("characterTrait").value;
+      const storyInput = document.getElementById("storyInput").value;
+
+      generateStory(characterName, characterAge, characterTrait, storyInput);
+    });
+
+    function generateStory(name, age, trait, input) {
+      const storyOutput = document.getElementById("storyOutput");
+
+      const story = `Once upon a time, there was a character named ${name}. 
+        At the age of ${age}, ${name} possessed a distinctive trait: ${trait}. 
+        ${name} embarked on an exciting adventure, driven by ${input}.`;
+
+      storyOutput.textContent = story;
+    }
+  </script>
+</body>
+</html>
