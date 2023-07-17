@@ -129,31 +129,37 @@
 
   <main>
     <div class="category-container">
-      <a href="artificial-intelligence.html" class="category">
+      <div class="category" onclick="redirectTo('artificial-intelligence.html')">
         <h2>Artificial Intelligence</h2>
         <p>Exploring the potential of AI</p>
-      </a>
-      <a href="internet-of-things.html" class="category">
+      </div>
+      <div class="category" onclick="redirectTo('internet-of-things.html')">
         <h2>Internet of Things</h2>
         <p>Connecting the world through IoT</p>
-      </a>
-      <a href="data-science.html" class="category">
+      </div>
+      <div class="category" onclick="redirectTo('data-science.html')">
         <h2>Data Science</h2>
         <p>Unveiling insights from data</p>
-      </a>
-      <a href="cybersecurity.html" class="category">
+      </div>
+      <div class="category" onclick="redirectTo('cybersecurity.html')">
         <h2>Cybersecurity</h2>
         <p>Protecting digital assets</p>
-      </a>
-      <a href="robotics.html" class="category">
+      </div>
+      <div class="category" onclick="redirectTo('robotics.html')">
         <h2>Robotics</h2>
         <p>Exploring the world of robots</p>
-      </a>
+      </div>
     </div>
   </main>
 
   <footer>
     <p>&copy; 2023 Alexandros Sanoulis</p>
   </footer>
+
+  <script>
+    function redirectTo(page) {
+      window.location.href = page;
+    }
+  </script>
 </body>
 </html>
