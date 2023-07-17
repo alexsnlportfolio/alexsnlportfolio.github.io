@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Health and Medicine</title>
+  <title>Health</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,61 +18,40 @@
       color: #fff;
     }
 
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #ff9900;
-    }
-
-    .container {
+    main {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
-      margin-top: 50px;
-      margin-bottom: 50px;
+      padding: 40px;
     }
 
     .category {
-      width: 300px;
-      height: 200px;
-      background-color: #E0E0E0;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      display: block;
+      text-decoration: none;
+      background-color: #fff;
       border-radius: 8px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      padding: 20px;
       margin: 20px;
-      cursor: pointer;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
     }
 
     .category:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
 
     .category h2 {
       font-size: 24px;
       font-weight: bold;
+      margin-bottom: 10px;
       text-align: center;
+    }
+
+    .category p {
+      font-size: 16px;
       margin: 0;
-      padding: 10px;
+      text-align: center;
     }
 
     footer {
@@ -81,73 +60,57 @@
       padding: 20px;
       text-align: center;
       font-size: 14px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="health.html">Health and Medicine</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <h1>Health and Medicine</h1>
+    <h1>Health</h1>
   </header>
 
-  <div class="container">
-    <div class="category">
-      <a href="article1.html" target="_blank">
-        <h2>Healthy Eating</h2>
-      </a>
-    </div>
-    <div class="category">
-      <a href="article2.html" target="_blank">
-        <h2>Category 2</h2>
-      </a>
-    </div>
-    <div class="category">
-      <a href="article3.html" target="_blank">
-        <h2>Category 3</h2>
-      </a>
-    </div>
-    <div class="category">
-      <a href="article4.html" target="_blank">
-        <h2>Category 4</h2>
-      </a>
-    </div>
-    <div class="category">
-      <a href="article5.html" target="_blank">
-        <h2>Category 5</h2>
-      </a>
-    </div>
-    <div class="category">
-      <a href="article6.html" target="_blank">
-        <h2>Category 6</h2>
-      </a>
-    </div>
-    <div class="category">
-      <a href="article7.html" target="_blank">
-        <h2>Category 7</h2>
-      </a>
-    </div>
-    <div class="category">
-      <a href="article8.html" target="_blank">
-        <h2>Category 8</h2>
-      </a>
-    </div>
-    <div class="category">
-      <a href="article9.html" target="_blank">
-        <h2>Category 9</h2>
-      </a>
-    </div>
-    <div class="category">
-      <a href="article10.html" target="_blank">
-        <h2>Category 10</h2>
-      </a>
-    </div>
-  </div>
+  <main>
+    <a href="article1.html" class="category">
+      <h2>Healthy Eating</h2>
+      <p>Eat well, live well</p>
+    </a>
+    <a href="exercise-fitness.html" class="category">
+      <h2>Exercise and Fitness</h2>
+      <p>Move your body, stay fit</p>
+    </a>
+    <a href="mental-health.html" class="category">
+      <h2>Mental Health</h2>
+      <p>Nurture your mind, find balance</p>
+    </a>
+    <a href="weight-loss.html" class="category">
+      <h2>Weight Loss</h2>
+      <p>Shed those extra pounds</p>
+    </a>
+    <a href="heart-health.html" class="category">
+      <h2>Heart Health</h2>
+      <p>Care for your cardiovascular system</p>
+    </a>
+    <a href="stress-management.html" class="category">
+      <h2>Stress Management</h2>
+      <p>Find peace in a hectic world</p>
+    </a>
+    <a href="sleep-wellness.html" class="category">
+      <h2>Sleep Wellness</h2>
+      <p>Recharge your body and mind</p>
+    </a>
+    <a href="nutrition-tips.html" class="category">
+      <h2>Nutrition Tips</h2>
+      <p>Maximize your nutrient intake</p>
+    </a>
+    <a href="immune-boosting.html" class="category">
+      <h2>Immune Boosting</h2>
+      <p>Strengthen your immune system</p>
+    </a>
+    <a href="healthy-habits.html" class="category">
+      <h2>Healthy Habits</h2>
+      <p>Cultivate a healthy lifestyle</p>
+    </a>
+  </main>
 
   <footer>
     <p>&copy; 2023 Alexandros Sanoulis</p>
