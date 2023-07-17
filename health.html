@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Healthy Lifestyle and Medicine</title>
+  <title>Healthy Lifestyle and Medicine - Portfolio of Alexandros Sanoulis</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,28 +18,94 @@
       color: #fff;
     }
 
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff9900;
+    }
+
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      justify-items: center;
       padding: 20px;
     }
 
     section {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
       background-color: #E0E0E0;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    section .details {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 18px;
+      opacity: 1;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+
+    section:hover .details {
+      opacity: 0;
+    }
+
+    section a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
       padding: 20px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    section h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
       text-align: center;
     }
 
     section p {
-      margin-bottom: 10px;
-      text-align: left;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s;
     }
 
-    section p:first-child {
-      font-weight: bold;
+    section:hover p {
+      opacity: 1;
     }
 
     footer {
@@ -51,37 +117,67 @@
     }
 
     @media screen and (max-width: 767px) {
+      header {
+        padding: 20px;
+      }
+
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+      }
+
       section {
-        font-size: 16px;
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to Healthy Lifestyle and Medicine</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Welcome to the Portfolio of Alexandros Sanoulis!</h1>
   </header>
 
   <div class="container">
     <section>
-      <p><strong>Healthy Lifestyle:</strong></p>
-      <p>Living a healthy lifestyle is important for overall well-being. Here are some natural ways to promote a healthy life:</p>
-      <ul>
-        <li>Eat a balanced diet with plenty of fruits, vegetables, whole grains, and lean proteins.</li>
-        <li>Engage in regular physical activity, such as walking, jogging, or cycling.</li>
-        <li>Get enough sleep to allow your body to rest and rejuvenate.</li>
-        <li>Stay hydrated by drinking an adequate amount of water throughout the day.</li>
-        <li>Manage stress through relaxation techniques, such as meditation or yoga.</li>
-      </ul>
-      <p><strong>Medication:</strong></p>
-      <p>Medication plays a crucial role in treating and managing various health conditions. Here are some key points about medication:</p>
-      <ul>
-        <li>Medications are designed to alleviate symptoms and address underlying causes of illnesses.</li>
-        <li>They can help manage chronic conditions, control pain, or improve overall health.</li>
-        <li>It is important to follow healthcare professionals' guidance and adhere to prescribed dosages for safe and effective use.</li>
-        <li>Understanding the benefits, potential side effects, and interactions of medications is essential.</li>
-        <li>Consulting with a healthcare provider or pharmacist is recommended for personalized medication information.</li>
-      </ul>
+      <a href="#">
+        <h2>Healthy Lifestyle</h2>
+        <p><strong>Living a healthy lifestyle is important for overall well-being.</strong></p>
+        <p>Here are some natural ways to promote a healthy life:</p>
+        <ul>
+          <li>Eat a balanced diet with plenty of fruits, vegetables, whole grains, and lean proteins.</li>
+          <li>Engage in regular physical activity, such as walking, jogging, or cycling.</li>
+          <li>Get enough sleep to allow your body to rest and rejuvenate.</li>
+          <li>Stay hydrated by drinking an adequate amount of water throughout the day.</li>
+          <li>Manage stress through relaxation techniques, such as meditation or yoga.</li>
+        </ul>
+      </a>
+    </section>
+
+    <section>
+      <a href="#">
+        <h2>Medicine</h2>
+        <p><strong>Understanding the role of medication in treating and managing health conditions.</strong></p>
+        <p>Medications can be used to address both physical and mental illnesses. They work in various ways to alleviate symptoms and promote healing. Some key points about medications include:</p>
+        <ul>
+          <li>Medications are developed based on scientific research and undergo rigorous testing to ensure their safety and effectiveness.</li>
+          <li>They can target specific biological processes or chemicals in the body to produce desired therapeutic effects.</li>
+          <li>Medications can help manage chronic conditions, provide relief from pain, reduce inflammation, or correct chemical imbalances in the brain.</li>
+          <li>It is important to take medications as prescribed by a healthcare professional and follow their guidance for dosage and duration.</li>
+          <li>Side effects may occur with certain medications, and it's essential to communicate any concerns or changes in symptoms to the healthcare provider.</li>
+        </ul>
+      </a>
     </section>
   </div>
 
