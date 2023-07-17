@@ -40,6 +40,20 @@
       color: #ff9900;
     }
 
+    /* Media Queries for Mobile Devices */
+    @media (max-width: 768px) {
+      nav ul li a {
+        font-size: 1.2em;
+      }
+    }
+
+    /* Media Queries for PC */
+    @media (min-width: 769px) {
+      nav ul li a {
+        font-size: 1em;
+      }
+    }
+
     section {
       padding: 40px;
       background-color: #E0E0E0;
@@ -65,17 +79,6 @@
       padding: 20px;
       text-align: center;
       font-size: 14px;
-    }
-
-    /* Media Queries for Mobile Devices */
-    @media (max-width: 768px) {
-      section {
-        padding: 20px;
-      }
-
-      nav ul li a {
-        font-size: 1.2em;
-      }
     }
   </style>
 </head>
