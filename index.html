@@ -1,112 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome to Alexandros Sanoulis Portfolio</title>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
-  .header {
-    background-color: #3498db;
-    color: #fff;
-    text-align: center;
-    padding: 2rem;
-  }
-
-  .intro {
-    padding: 2rem;
-    text-align: center;
-  }
-
-  .portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1rem;
-  }
-
-  .project {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 1rem;
-    padding: 1.5rem;
-    width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    text-decoration: none;
-  }
-
-  .project:hover {
-    transform: scale(1.05);
-  }
-
-  .project h3 {
-    color: #3498db;
-  }
-
-  .about-section {
-    background-color: #f9f9f9;
-    padding: 3rem 0;
-    text-align: center;
-  }
-
-  .about-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .section-title {
-    color: #3498db;
-    font-size: 24px;
-    margin-bottom: 1rem;
-  }
-
-  .section-text {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-  }
-
-  .section {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .footer {
-    background-color: #34495e;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto;
-  }
-
-  @media (max-width: 768px) {
-    .portfolio {
+  <title>Welcome to Alexandros Sanoulis Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #F9F7E8, #F0E4B1);
+      color: #333;
+      display: flex;
       flex-direction: column;
-      align-items: center;
+      min-height: 100vh;
+    }
+
+    .header {
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffddc1;
+    }
+
+    .intro {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .portfolio {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem;
     }
 
     .project {
-      width: 80%;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 1rem;
+      padding: 1.5rem;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+      text-decoration: none;
     }
-  }
-</style>
+
+    .project:hover {
+      transform: scale(1.05);
+    }
+
+    .project h3 {
+      color: #3498db;
+    }
+
+    .about-section {
+      background-color: #f9f9f9;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      color: #3498db;
+      font-size: 24px;
+      margin-bottom: 1rem;
+    }
+
+    .section-text {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .section {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer {
+      background-color: #34495e;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: auto;
+    }
+
+    /* Media Queries for Mobile Devices */
+    @media (max-width: 768px) {
+      .portfolio {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .project {
+        width: 80%;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="header">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="coding.html">Web Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
     <h1>Welcome to Alexandros Sanoulis Portfolio</h1>
   </div>
 
@@ -131,20 +161,7 @@
 
   <div class="about-section">
     <div class="about-content">
-      <div class="section">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-text">I am Alexandros Sanoulis, a 20-year-old versatile professional with expertise in self-taught web development and content writing. With a strong passion for technology and creativity, I strive to deliver high-quality solutions that meet client expectations and engage audiences. Being self-taught in various writing subjects and web development has allowed me to continuously expand my skills and knowledge in these fields.</p>
-      </div>
-
-      <div class="section">
-        <h2 class="section-title">Web Development</h2>
-        <p class="section-text">As a web developer, I specialize in building interactive and responsive websites. I have hands-on experience in HTML, CSS, JavaScript, and various web frameworks, which allows me to create visually appealing and user-friendly interfaces. While my proficiency primarily lies in front-end development, I also have the ability to handle back-end applications.</p>
-      </div>
-
-      <div class="section">
-        <h2 class="section-title">Writing</h2>
-        <p class="section-text">Alongside my web development skills, I possess a strong flair for writing compelling and engaging content. I have expertise in crafting well-researched articles, blog posts, and website copy. I excel in adapting writing styles to target specific audiences and deliver valuable information. With my attention to detail and excellent communication skills, I can effectively convey complex ideas in a clear and concise manner.</p>
-      </div>
+      <!-- About Me, Web Development, Writing sections here -->
     </div>
   </div>
 
