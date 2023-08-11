@@ -1,101 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Portfolio of Alexandros Sanoulis</title>
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f7f7f7;
-      color: #444;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to Alexandros Sanoulis Portfolio</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the page stretches to at least the full viewport height */
+  }
+
+  .header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .intro {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .project {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none; /* Remove underlines from links */
+  }
+
+  .project:hover {
+    transform: scale(1.05);
+  }
+
+  .project h3 {
+    color: #3498db;
+  }
+
+  .footer {
+    background-color: #34495e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Pushes the footer to the bottom */
+  }
+
+  @media (max-width: 768px) {
+    .portfolio {
+      flex-direction: column;
+      align-items: center;
     }
 
-    header {
-      background-color: #34495e; /* Dark Slate Gray */
-      padding: 40px;
-      text-align: center;
-      color: #fff;
+    .project {
+      width: 80%;
     }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.5em;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #ff9900;
-    }
-
-    /* Media Queries for Mobile Devices */
-    @media (max-width: 768px) {
-      nav ul li a {
-        font-size: 1.2em;
-      }
-    }
-
-    /* Media Queries for PC */
-    @media (min-width: 769px) {
-      nav ul li a {
-        font-size: 1em;
-      }
-    }
-
-    section {
-      padding: 40px;
-      background-color: #e1e8eb; /* Light Blue Gray */
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    section h2 {
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    section p {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    footer {
-      background-color: #34495e; /* Dark Slate Gray */
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="writing.html">Writing</a></li>
-        <li><a href="prog.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <h1 style="font-size: 36px;">Welcome to the Portfolio of Alexandros Sanoulis!</h1>
-    <h3 style="font-size: 18px;">(Some sections are not completed yet)</h3>
-  </header>
+  <div class="header">
+    <h1>Welcome to Alexandros Sanoulis Portfolio</h1>
+  </div>
+
+  <div class="intro">
+    <p>Welcome to my vibrant portfolio showcasing my projects and skills.</p>
+  </div>
 
   <section>
     <h2>About Me</h2>
@@ -112,8 +98,23 @@
     <p>Alongside my web development skills, I possess a strong flair for writing compelling and engaging content. I have expertise in crafting well-researched articles, blog posts, and website copy. I excel in adapting writing styles to target specific audiences and deliver valuable information. With my attention to detail and excellent communication skills, I can effectively convey complex ideas in a clear and concise manner.</p>
   </section>
 
-  <footer>
-    <p>&copy; 2023 Alexandros Sanoulis</p>
-  </footer>
+  <div class="portfolio">
+    <a class="project" href="writing.html">
+      <h3>Writing</h3>
+      <p>Check out my written works.</p>
+    </a>
+    <a class="project" href="coding.html">
+      <h3>Web Projects</h3>
+      <p>Explore my coding projects.</p>
+    </a>
+    <a class="project" href="contact.html">
+      <h3>Contact</h3>
+      <p>Get in touch with me.</p>
+    </a>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2023 Alexandros Sanoulis Portfolio</p>
+  </div>
 </body>
 </html>
