@@ -9,14 +9,16 @@
       padding: 0;
       background: linear-gradient(135deg, #F9F7E8, #F0E4B1);
       color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    header {
-      background-color: #333;
-      padding: 20px;
-      text-align: center;
+    .header {
+      background-color: #3498db;
       color: #fff;
-      height: auto;
+      text-align: center;
+      padding: 2rem;
     }
 
     nav ul {
@@ -106,11 +108,10 @@
     }
 
     footer {
-      background-color: #333;
+      background-color: #34495e;
       color: #fff;
-      padding: 20px;
       text-align: center;
-      font-size: 14px;
+      padding: 1rem;
       margin-top: auto;
     }
 
@@ -124,7 +125,7 @@
         height: 150px;
       }
 
-      header {
+      .header {
         padding: 40px;
       }
 
@@ -135,7 +136,7 @@
   </style>
 </head>
 <body>
-  <header>
+  <div class="header">
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -145,7 +146,7 @@
       </ul>
     </nav>
     <h1>Welcome to the Portfolio of Alexandros Sanoulis!</h1>
-  </header>
+  </div>
 
   <div class="container">
     <section>
