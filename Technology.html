@@ -7,60 +7,60 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background: linear-gradient(135deg, #F9F7E8, #F0E4B1);
       color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    header {
-      background-color: #333;
-      padding: 20px;
-      text-align: center;
+    .header {
+      background-color: #3498db;
       color: #fff;
+      text-align: center;
+      padding: 2rem;
     }
 
-    header nav ul {
+    nav ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
     }
 
-    header nav ul li {
+    nav ul li {
+      display: inline;
       margin-right: 20px;
     }
 
-    header nav ul li a {
+    nav ul li a {
       color: #fff;
       text-decoration: none;
       font-size: 18px;
       transition: color 0.3s;
     }
 
-    header nav ul li a:hover {
-      color: #ff9900;
-    }
-
-    main {
-      padding: 40px;
-      background-color: #E0E0E0;
+    nav ul li a:hover {
+      color: #ffddc1;
     }
 
     .category-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      padding: 1rem;
     }
 
     .category {
-      width: 300px;
-      margin: 20px;
       background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 1rem;
+      padding: 1.5rem;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
       cursor: pointer;
+      text-decoration: none;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -68,98 +68,73 @@
     }
 
     .category:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05);
     }
 
     .category h2 {
-      font-size: 24px;
-      font-weight: bold;
+      color: #3498db;
       margin-bottom: 10px;
-      text-align: center;
     }
 
     .category p {
       font-size: 16px;
       margin: 0;
-      text-align: center;
     }
 
-    footer {
-      background-color: #333;
+    .footer {
+      background-color: #34495e;
       color: #fff;
-      padding: 20px;
       text-align: center;
-      font-size: 14px;
-      margin-top: 20px;
+      padding: 1rem;
+      margin-top: auto;
     }
 
-    /* Media Queries */
+    /* Media Queries for Mobile Devices */
     @media (max-width: 768px) {
-      header {
-        padding: 20px;
-      }
-
-      main {
-        padding: 20px;
-      }
-
       .category {
-        width: 100%;
-      }
-
-      header nav ul li a {
-        font-size: 16px;
+        width: 80%;
       }
     }
   </style>
 </head>
 <body>
-  <header>
+  <div class="header">
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="writing.html">Writing</a></li>
-        <li><a href="prog.html">Projects</a></li>
+        <li><a href="coding.html">Web Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <h1>Technology</h1>
-  </header>
+  </div>
 
-  <main>
-    <div class="category-container">
-      <div class="category" onclick="redirectTo('techai.html')">
-        <h2>Artificial Intelligence</h2>
-        <p>Exploring the potential of AI</p>
-      </div>
-      <div class="category" onclick="redirectTo('techiot.html')">
-        <h2>Internet of Things</h2>
-        <p>Connecting the world through IoT</p>
-      </div>
-      <div class="category" onclick="redirectTo('data-science.html')">
-        <h2>Data Science</h2>
-        <p>Coming soon</p>
-      </div>
-      <div class="category" onclick="redirectTo('cybersecurity.html')">
-        <h2>Cybersecurity</h2>
-        <p>Coming Soon</p>
-      </div>
-      <div class="category" onclick="redirectTo('robotics.html')">
-        <h2>Robotics</h2>
-        <p>Coming soon!</p>
-      </div>
-    </div>
-  </main>
+  <div class="category-container">
+    <a class="category" href="techai.html">
+      <h2>Artificial Intelligence</h2>
+      <p>Exploring the potential of AI</p>
+    </a>
+    <a class="category" href="techiot.html">
+      <h2>Internet of Things</h2>
+      <p>Connecting the world through IoT</p>
+    </a>
+    <a class="category">
+      <h2>Data Science</h2>
+      <p>Coming soon</p>
+    </a>
+    <a class="category">
+      <h2>Cybersecurity</h2>
+      <p>Coming Soon</p>
+    </a>
+    <a class="category">
+      <h2>Robotics</h2>
+      <p>Coming soon!</p>
+    </a>
+  </div>
 
-  <footer>
+  <div class="footer">
     <p>&copy; 2023 Alexandros Sanoulis</p>
-  </footer>
-
-  <script>
-    function redirectTo(page) {
-      window.location.href = page;
-    }
-  </script>
+  </div>
 </body>
 </html>
